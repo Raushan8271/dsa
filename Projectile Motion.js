@@ -2,23 +2,18 @@ function runProgram(input) {
     // Write code here
     var input = input.trim().split("\n");
 
-    var str1 = input[0].trim()
-    var str2 = input[1].trim()
-    console.log(str1)
-    console.log(str2)
-    let strRes = ''
-    for (let i = 0; i < str1.length;i++){
-        
+    let [a, b, c, L, R] = input[0].trim().split(" ").map(Number);
+    // console.log(a, b, c, L, R)
+
+    let pro = 1;
+    for (let i = L; i <= R; i++) {
+        pro *= (a) * (i ** 2) + (b * i) + c
     }
-
-
-
-
+    console.log(pro)
 
 }
 if (process.env.USERNAME === "Raushan Singh") {
-    runProgram(`Hello , Sir
-    sjjiytyfqp`);
+    runProgram(`-1 3 8 -2 2`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

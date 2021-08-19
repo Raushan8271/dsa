@@ -1,24 +1,25 @@
 function runProgram(input) {
     // Write code here
-    var input = input.trim().split("\n");
+    var input = input.trim().split("\n")
 
-    var str1 = input[0].trim()
-    var str2 = input[1].trim()
-    console.log(str1)
-    console.log(str2)
-    let strRes = ''
-    for (let i = 0; i < str1.length;i++){
-        
+    for (var i = 1; i < input.length; i++) {
+        let arr = input[i].trim().split(" ").map(Number)
+        // console.log(arr)
+        let res = []
+        for (let j = arr.length - 1; j >= 0; j--) {
+            res.push(arr[j])
+        }
+        console.log(res.join(" "))
     }
 
-
-
-
-
 }
+
 if (process.env.USERNAME === "Raushan Singh") {
-    runProgram(`Hello , Sir
-    sjjiytyfqp`);
+    runProgram(`4
+    1 2 3 4
+    1 2 3 4
+    1 2 3 4
+    1 2 3 4`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

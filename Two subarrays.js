@@ -1,48 +1,41 @@
 function runProgram(input) {
     // Write code here
     var input = input.trim().split("\n");
-    const [len, k] = input[0].trim().split(" ").map(Number)
-    let str = input[1].trim()
-    // console.log(str, k)
-    let count = 0
-    for (let i = 0; i < str.length; i++) {
-        let temp = ''
-        for (let j = i; j < str.length; j++) {
-            temp += str[j]
-            if (temp.length == k) {
-                var obj = {}
-                for (let i = 0; i < temp.length; i++) {
-                    if (obj[temp[i]] = obj[temp[i]]) {
-                        obj[temp[i]] += 1
-                    }
-                    else {
-                        obj[temp[i]] = 1
-                    }
+
+    for (let i = 2; i < input.length; i++) {
+        let str = input[i].trim()
+        let count = 0
+        // console.log(str)
+        for (let j = 0; j < str.length; j++) {
+            let res = ''
+            for (let k = j; k < str.length; k++) {
+                res += str[k]
+                // console.log(res)
+                let obj = {}
+                for (let l = 0; l < res.length; l++) {
+                    obj[res[l]] = obj[res[l]] ? obj[res[l]] += 1 : obj[res[l]] = 1
                 }
                 // console.log(obj)
                 let flag = true
-                for (let i in obj) {
-                    if (obj[i] > 1) {
+                for (let l in obj) {
+                    if (obj[l] > 2) {
                         flag = false
-                        break
                     }
                 }
                 if (flag) {
                     count++
                 }
             }
-            if (temp.length > k){
-                break
-            }
         }
+        console.log(count)
     }
-    console.log(count)
 
 
 }
 if (process.env.USERNAME === "Raushan Singh") {
-    runProgram(`11 3
-    aabcdabbcdc`);
+    runProgram(`1
+    5
+    aabba`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

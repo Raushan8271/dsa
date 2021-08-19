@@ -352,3 +352,64 @@
 // }
 
 // console.log(result);
+
+// function addUpTo(n) {
+//     return n * (n + 1) / 2;
+// }
+
+// var time1 = performance.now();
+// console.log(addUpTo(1000000000));
+// var time2 = performance.now();
+// console.log(`Time Elapsed: ${(time2 - time1) / 1000} seconds.`)
+
+// let obj = {
+//     fname: "raushan",
+//     age: 25
+// }
+
+// console.log(Object.keys(obj))
+// console.log(Object.entries(obj))
+// console.log(obj.hasOwnProperty("fname"))
+
+// var str = 'aaaabbb'
+// console.log(charCount("aa"))
+
+
+// function charCount(str) {
+//     let obj = {};
+//     for (let i = 0; i < str.length; i++) {
+//         if (/[a-z0-9]/.test(str[i])) {
+//             if (obj[str[i]] > 0) {
+//                 obj[str[i]]++;
+//             } else {
+//                 obj[str[i]] = 1;
+//             }
+//         }
+//     }
+//     return obj
+// }
+
+// function charCount(str) {
+//     let obj = {};
+//     for (let char of str) {
+//         if (/[a-z0-9]/.test(char)) {
+//             if (obj[char] > 0) {
+//                 obj[char]++;
+//             } else {
+//                 obj[char] = 1;
+//             }
+//         }
+//     }
+//     return obj
+// }
+function charCount(str) {
+    let obj = {};
+    for (let char of str) {
+        if (/[A-Za-z0-9]/.test(char)) {
+            obj[char] = ++obj[char] || 1
+        }
+    }
+    return obj
+}
+
+console.log(charCount("Hello12 !&"))
