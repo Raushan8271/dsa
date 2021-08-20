@@ -13,10 +13,10 @@ function runProgram(input) {
 
     let res = 0
     let flag = true
-    for (let i = 1; i < arr.length; i++) {
-        res += arr[i - 1]
-        if ((sum - res - arr[i]) == res) {
-            console.log(i + 1)
+    for (let i = 0; i < arr.length; i++) {
+        res += arr[i]
+        if ((sum - res - arr[i + 1]) == res) {
+            console.log(i + 2)
             flag = false
             break
         }
