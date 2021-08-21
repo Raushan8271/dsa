@@ -402,14 +402,133 @@
 //     }
 //     return obj
 // }
-function charCount(str) {
-    let obj = {};
-    for (let char of str) {
-        if (/[A-Za-z0-9]/.test(char)) {
-            obj[char] = ++obj[char] || 1
-        }
-    }
-    return obj
-}
+// function charCount(str) {
+//     let obj = {};
+//     for (let char of str) {
+//         if (/[A-Za-z0-9]/.test(char)) {
+//             obj[char] = ++obj[char] || 1
+//         }
+//     }
+//     return obj
+// }
 
-console.log(charCount("Hello12 !&"))
+// console.log(charCount("Hello12 !&"))
+
+
+// function getYear() {
+//     var year = new Date().getFullYear()
+//     return year
+// }
+
+// getYear()
+// console.log(year)
+
+// console.log(name)
+
+// name = "raushan"
+
+// var arr = new Array(5).fill(0).map(function (a, b) { return b + 1 })
+
+// console.log(arr)
+// function al() {
+//     var name = "masai"
+//     console.log(this.name)
+// }
+
+// var name = "Ra"
+
+// al()
+
+// 'use strict'
+// function print() {
+//     console.log(this.name)
+// }
+// var persone = {
+//     name: "raushan",
+//     com: "masai",
+//     print: print
+// }
+// persone.print()
+// var name = "A"
+// const a = ['A', "B", "C"]
+// a[0] = "D"
+
+// console.log(a)
+
+// printname("raushan")
+// var printname
+// function printname(name) {
+//     console.log("hello", name)
+// }
+// printname = function (name) {
+//     console.log("hey", name)
+// }
+// var x = 10
+
+// function a() {
+//     var x = 20
+//     function b() {
+//         console.log(x)
+//     }
+//     return b
+// }
+// var g = a()
+
+// g()
+
+// p("raysha")
+// var p = function (n) {
+//     console.log("h", n)
+// }
+// console.log(name)
+// name = "name"
+// var name
+
+// const prod = (x) => {
+//     x = x + 5
+//     return innner => (x * innner)
+// }
+// prod(5)(10)
+// let f = "r"
+// let l = "s"
+// const g = { f, l }
+// console.log(typeof []);
+// function g() {
+//     let s = true
+//     if (s) {
+//         const n = "masai"
+//     }
+//     console.log(n)
+// }
+
+// g()
+
+// function g() {
+//     var x = 10
+//     this.b()
+// }
+// function b() {
+//     var x = 20
+//     console.log(this.x)
+// }
+// g()
+
+// console.log(typeof function () {
+
+// })
+
+// function name(x) {
+//     var y = x * 10
+//     function v(z) {
+//         console.log(x, y, z)
+//     }
+//     v(y * 5)
+// }
+// name(3)
+// n = "ra"
+
+// var n
+// console.log(n)
+
+console.log(naa)
+var naa = "raushan"

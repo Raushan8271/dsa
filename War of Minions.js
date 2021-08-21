@@ -44,8 +44,8 @@ function runProgram(input) {
 
 }
 if (process.env.USERNAME === "Raushan Singh") {
-    runProgram(`5
-    aabbc`);
+    runProgram(`12
+    abbabaadcbbc`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
