@@ -530,5 +530,5 @@
 // var n
 // console.log(n)
 
-console.log(naa)
-var naa = "raushan"
+// console.log(naa)
+// var naa = "raushan"
