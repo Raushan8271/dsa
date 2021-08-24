@@ -2,29 +2,28 @@ function runProgram(input) {
     // Write code here
     var input = input.trim().split("\n");
 
-    for (let i = 2; i < input.length; i += 2) {
-        var arr = input[i].trim().split(" ").map(Number)
-        // console.log(arr)
-        var count = 0
-        for (let j = 0; j < arr.length; j++) {
-            for (let k = 0; k < arr.length; k++) {
-
-                if ((4 * arr[j]) == (5 * arr[k]) && j != k) {
-                    // console.log((4 * arr[j]), (5 * arr[k]), j,k)
-                    count++
-                }
-            }
-        }
-        console.log(count)
+    var len = +input[0];
+    str = input[1].trim();
+    // console.log(str);
+    let temp = '';
+    for (let i = len - 1; i >= 0; i--) {
+        temp += str[i]
     }
+
+    if (temp == str) {
+        console.log("Yes");
+    }
+    else {
+        console.log("No");
+    }
+
+
+
 
 }
 if (process.env.USERNAME === "Raushan Singh") {
-    runProgram(`2
-    6
-    5 5 5 4 4 4
-    3
-    0 0 0`);
+    runProgram(`6
+    nrupul`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

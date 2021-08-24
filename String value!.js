@@ -2,29 +2,19 @@ function runProgram(input) {
     // Write code here
     var input = input.trim().split("\n");
 
-    for (let i = 2; i < input.length; i += 2) {
-        var arr = input[i].trim().split(" ").map(Number)
-        // console.log(arr)
-        var count = 0
-        for (let j = 0; j < arr.length; j++) {
-            for (let k = 0; k < arr.length; k++) {
-
-                if ((4 * arr[j]) == (5 * arr[k]) && j != k) {
-                    // console.log((4 * arr[j]), (5 * arr[k]), j,k)
-                    count++
-                }
-            }
-        }
-        console.log(count)
+    str = input[0].trim();
+    // console.log(str);
+    let value = 0
+    for (let i = 0; i < str.length; i++) {
+        value += (str.charCodeAt(i) - 96)
     }
+
+    console.log(value)
+
 
 }
 if (process.env.USERNAME === "Raushan Singh") {
-    runProgram(`2
-    6
-    5 5 5 4 4 4
-    3
-    0 0 0`);
+    runProgram(`aba`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

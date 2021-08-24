@@ -3,28 +3,32 @@ function runProgram(input) {
     var input = input.trim().split("\n");
 
     for (let i = 2; i < input.length; i += 2) {
-        var arr = input[i].trim().split(" ").map(Number)
-        // console.log(arr)
-        var count = 0
-        for (let j = 0; j < arr.length; j++) {
-            for (let k = 0; k < arr.length; k++) {
-
-                if ((4 * arr[j]) == (5 * arr[k]) && j != k) {
-                    // console.log((4 * arr[j]), (5 * arr[k]), j,k)
-                    count++
-                }
+        var str = input[i].trim()
+        // console.log(str)
+        let count = 0
+        for (let j = 0; j < str.length; j++) {
+            if (str[j] < 10 && str[j] >= 0) {
+                count++
             }
         }
-        console.log(count)
+        // console.log(count)
+        if (count < str.length / 2 && count > 0) {
+            console.log("Strong")
+        }
+        else {
+            console.log("Weak")
+        }
     }
 
 }
 if (process.env.USERNAME === "Raushan Singh") {
     runProgram(`2
     6
-    5 5 5 4 4 4
-    3
-    0 0 0`);
+    aa1234
+    6
+    abcd12
+    4
+    pjfj`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

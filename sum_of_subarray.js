@@ -12,22 +12,26 @@ function runProgram(input) {
     }
 
     function Sum(arr, k) {
-        var count = 0
-        for (let i = 0; i < arr.length; i++) {
-            var sum = 0
-            for (let j = i; j < arr.length; j++) {
-                sum += arr[j]
-                // console.log(sum)
-                if (sum == k) {
-                    count++;
-                    break;
-                }
-            }
-            if (count == 1) {
+        var flag = false
+        let sum = arr[0]
+        let l = 0
+        let no = arr[l]
+        for (let i = 1; i < arr.length; i++) {
+            if (sum == k) {
+                flag = true;
                 break;
             }
+            sum += arr[i]
+            // console.log(sum)
+            if (sum > k) {
+                sum -= no
+                l++
+                no = arr[l]
+            }
+
+
         }
-        if (count == 1) {
+        if (flag) {
             console.log("Yes")
         } else {
             console.log("No")
@@ -43,7 +47,9 @@ if (process.env.USERNAME === "Raushan Singh") {
     4 5
     1 2 1 3
     3 2
-    1 2 1`);
+    1 2 1
+    8 14
+    1 7 4 3 2 1 5 6`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

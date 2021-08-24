@@ -6,22 +6,30 @@ function runProgram(input) {
         const [len, m] = input[i - 1].trim().split(" ").map(Number)
         let arr = input[i].trim().split(" ").map(Number)
         // console.log(arr, m)
+        countSub(arr, len, m)
+    }
+
+    function countSub(arr, n, k) {
+        let start = 0
+        let end = 0;
         let count = 0
-        let sum = 0
-        let arrCount = 0
-        for (let j = 0; j < len; j++) {
-            sum += arr[j]
-            if (sum < m) {
-                count++
-            } else {
-                sum = 0
+        let sum = arr[0];
+        while (start < n && end < n) {
+            if (sum < k) {
+                end++;
+                if (end >= start) {
+                    count += end - start;
+                }
+                if (end < n) {
+                    sum += arr[end];
+                }
             }
-            if (arr[j] < m && sum != arr[j]) {
-                arrCount++
+            else {
+                sum -= arr[start];
+                start++;
             }
         }
-        console.log(count + arrCount)
-        // console.log(arrCount)
+        console.log(count)
     }
 
 }
