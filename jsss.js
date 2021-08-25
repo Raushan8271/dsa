@@ -532,3 +532,8 @@
 
 // console.log(naa)
 // var naa = "raushan"
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find(element => element = 130);
+
+console.log(found);
