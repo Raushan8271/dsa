@@ -1,30 +1,24 @@
 function runProgram(input) {
     // Write code here
-    var input = input.trim().split("\n")
+    var input = input.trim().split("\n");
 
-    for (var i = 1; i < input.length; i++) {
-        let arr = input[i].trim().split(" ").map(Number)
-        // console.log(arr)
-        let j = 0;
-        let k = arr.length - 1;
-        while (j < k) {
-            let temp = arr[j]
-            arr[j] = arr[k]
-            arr[k] = temp
-
-            j++
-            k--
+    for (let i = 1; i < input.length; i++) {
+        let [x, y, z] = input[i].trim().split(" ").map(Number)
+        let max = z - x;
+        if ((z - y) > max) {
+            max = z - y;
+            console.log(max)
         }
-        console.log(arr.join(" "))
+        else {
+            console.log(max)
+        }
     }
-}
 
+}
 if (process.env.USERNAME === "Raushan Singh") {
-    runProgram(`4
-    1 2 3 4
-    1 2 3 4 5
-    1 2 3 4 5 6
-    1 2 3 4`);
+    runProgram(`2
+    2 3 4
+    1 1 5`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

@@ -17,14 +17,12 @@ function runProgram(input) {
         }
         console.log(arr.join(" "))
     }
+
 }
 
 if (process.env.USERNAME === "Raushan Singh") {
     runProgram(`4
-    1 2 3 4
-    1 2 3 4 5
-    1 2 3 4 5 6
-    1 2 3 4`);
+    1 2 3 4 5`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

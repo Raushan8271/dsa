@@ -532,8 +532,31 @@
 
 // console.log(naa)
 // var naa = "raushan"
-const array1 = [5, 12, 8, 130, 44];
 
-const found = array1.find(element => element = 130);
+// const found = array1.find(element => element = 130);
 
-console.log(found);
+// console.log(found);
+
+const array = [
+    { fname: "Raushan", age: 25 },
+    { fname: "Ranu", age: 22 },
+    { fname: "Bha", age: 35 },
+    { fname: "Prakash", age: 28 },
+    { fname: "Rahul", age: 18 },
+    { fname: "SonRu", age: 31 },
+];
+
+console.log(array.sort((a, b) => (a.age - b.age)));
+
+let fill = array.filter((el) => {
+    if (el.fname[0] == "R") {
+        return el
+    }
+})
+
+console.log(fill)
+
+
+function show(params) {
+
+}

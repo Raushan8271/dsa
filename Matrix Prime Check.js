@@ -1,30 +1,39 @@
 function runProgram(input) {
     // Write code here
-    var input = input.trim().split("\n")
+    var input = input.trim().split("\n");
 
-    for (var i = 1; i < input.length; i++) {
+    var [row, col] = input[0].trim().split(" ").map(Number)
+
+    let count = 0
+
+    for (let i = 1; i < input.length; i++) {
         let arr = input[i].trim().split(" ").map(Number)
-        // console.log(arr)
-        let j = 0;
-        let k = arr.length - 1;
-        while (j < k) {
-            let temp = arr[j]
-            arr[j] = arr[k]
-            arr[k] = temp
-
-            j++
-            k--
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] > 1 && isPrime(arr[j])) {
+                count++
+            }
         }
-        console.log(arr.join(" "))
     }
-}
+    console.log(count)
 
+    function isPrime(no) {
+        for (let i = 2; i <= Math.sqrt(no); i++) {
+            if (no % i == 0) {
+                flag = false
+                return false
+            }
+        }
+        return true
+    }
+
+
+
+}
 if (process.env.USERNAME === "Raushan Singh") {
-    runProgram(`4
-    1 2 3 4
-    1 2 3 4 5
-    1 2 3 4 5 6
-    1 2 3 4`);
+    runProgram(`3 3
+    1 2 3 
+    4 5 6
+    7 8 9`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
