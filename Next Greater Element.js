@@ -5,22 +5,49 @@ function runProgram(input) {
     for (let i = 2; i < input.length; i += 2) {
         let arr = input[i].trim().split(" ").map(Number)
         // console.log(arr)
-        let res = []
-        for (let j = 0; j < arr.length; j++) {
-            let item
-            for (let k = j + 1; k < arr.length; k++) {
-                if (arr[j] < arr[k]) {
-                    item = arr[k]
-                    break;
-                }
-            }
-            if (item != undefined) {
-                res.push(item)
-            } else {
-                res.push(-1)
-            }
+        nextGreaterElement(arr)
+    }
+    function nextGreaterElement(arr) {
+        let j = 0;
+        let k = arr.length - 1;
+        while (j < k) {
+            let temp = arr[j]
+            arr[j] = arr[k]
+            arr[k] = temp
+
+            j++
+            k--
         }
-        console.log(res.join(" "))
+        // console.log(arr)
+        let stack = []
+        let res = []
+        for (let i = 0; i < arr.length; i++) {
+            while (stack.length > 0 && stack[stack.length - 1] <= arr[i]) {
+                stack.pop()
+            }
+            if (stack.length == 0) {
+                res.push(-1)
+            } else {
+                res.push(stack[stack.length - 1])
+            }
+            stack.push(arr[i])
+        }
+        // console.log(res.join(" "))
+        reverse(res)
+    }
+
+    function reverse(arr) {
+        let j = 0;
+        let k = arr.length - 1;
+        while (j < k) {
+            let temp = arr[j]
+            arr[j] = arr[k]
+            arr[k] = temp
+
+            j++
+            k--
+        }
+        console.log(arr.join(" "))
     }
 
 }
