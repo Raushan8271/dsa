@@ -556,7 +556,11 @@ let fill = array.filter((el) => {
 
 console.log(fill)
 
+check('ha')
 
-function show(params) {
-
+function check(iname) {
+    console.log(array.findIndex((el) => {
+        return el.fname == iname
+    }))
 }
+
