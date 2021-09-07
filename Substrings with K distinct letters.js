@@ -9,7 +9,7 @@ function runProgram(input) {
     for (let i = 0; i < str.length; i++) {
         if (res.includes(str[i])) {
             // let s = remove(res, str[i])
-            console.log(s)
+            // console.log(s)
             res += s
             res += str[i]
         } else {
