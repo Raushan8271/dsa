@@ -537,30 +537,30 @@
 
 // console.log(found);
 
-const array = [
-    { fname: "Raushan", age: 25 },
-    { fname: "Ranu", age: 22 },
-    { fname: "Bha", age: 35 },
-    { fname: "Prakash", age: 28 },
-    { fname: "Rahul", age: 18 },
-    { fname: "SonRu", age: 31 },
-];
+// const array = [
+//     { fname: "Raushan", age: 25 },
+//     { fname: "Ranu", age: 22 },
+//     { fname: "Bha", age: 35 },
+//     { fname: "Prakash", age: 28 },
+//     { fname: "Rahul", age: 18 },
+//     { fname: "SonRu", age: 31 },
+// ];
 
-console.log(array.sort((a, b) => (a.age - b.age)));
+// console.log(array.sort((a, b) => (a.age - b.age)));
 
-let fill = array.filter((el) => {
-    if (el.fname[0] == "R") {
-        return el
-    }
-})
+// let fill = array.filter((el) => {
+//     if (el.fname[0] == "R") {
+//         return el
+//     }
+// })
 
-console.log(fill)
+// console.log(fill)
 
-check('ha')
+// check('ha')
 
-function check(iname) {
-    console.log(array.findIndex((el) => {
-        return el.fname == iname
-    }))
-}
+// function check(iname) {
+//     console.log(array.findIndex((el) => {
+//         return el.fname == iname
+//     }))
+// }
 

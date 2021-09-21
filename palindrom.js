@@ -19,10 +19,10 @@ function runProgram(input) {
             }
         }
         if (odd <= 1) {
-            console.log("Possible!")
+            console.log("Yes")
         }
         else {
-            console.log("Not Possible!")
+            console.log("No")
         }
     }
 
